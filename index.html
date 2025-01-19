@@ -1,36 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Welcome to IvyParkDwell, your premier destination for quality housing and rentals. Explore available rooms and apartments today!">
-    <title>Home - IvyParkDwell</title>
+    <title>Home | Room Rentals</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
-        <div class="logo">
-            <img src="images/logo.jpg" alt="IvyParkDwell Logo">
+        <div class="container">
+            <h1>Welcome to Room Rentals</h1>
+            <p>Your one-stop solution for finding the perfect student accommodation!</p>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="listings.html">Listings</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="Feedback.html">Feedback</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <section class="hero">
-        <h1>Welcome to IvyParkDwell</h1>
-        <p>Your premier destination for quality living spaces. Find your next home with us!</p>
-        <a href="listings.html" class="cta-button">Browse Listings</a>
-    </section>
+    <main>
+        <section class="search-bar">
+            <form id="search-form">
+                <input type="text" id="location" placeholder="Enter location" required>
+                <input type="number" id="budget" placeholder="Enter budget (e.g., 3000)" required>
+                <select id="amenities">
+                    <option value="">Select amenities</option>
+                    <option value="wifi">Wi-Fi</option>
+                    <option value="laundry">Laundry</option>
+                    <option value="parking">Parking</option>
+                </select>
+                <button type="submit">Search</button>
+            </form>
+        </section>
+
+        <section class="featured-rooms">
+            <h2>Featured Rooms</h2>
+            <div class="rooms-container">
+                <article class="room">
+                    <img src="room1.jpg" alt="Cozy single room with desk">
+                    <h3>Cozy Single Room</h3>
+                    <p>Location: City Center</p>
+                    <p>Price: R3000/month</p>
+                </article>
+                <article class="room">
+                    <img src="room2.jpg" alt="Spacious room with modern amenities">
+                    <h3>Spacious Room</h3>
+                    <p>Location: Suburb</p>
+                    <p>Price: R2500/month</p>
+                </article>
+                <article class="room">
+                    <img src="room3.jpg" alt="Shared room ideal for students">
+                    <h3>Shared Room</h3>
+                    <p>Location: Near Campus</p>
+                    <p>Price: R2000/month</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="why-us">
+            <h2>Why Choose Us?</h2>
+            <ul>
+                <li>Secure and verified listings</li>
+                <li>Budget-friendly options</li>
+                <li>Easy-to-use search filters</li>
+                <li>Excellent customer support</li>
+            </ul>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2024 IvyParkDwell. All rights reserved.</p>
+        <p>&copy; 2025 Room Rentals. All rights reserved.</p>
+        <nav>
+            <a href="about.html">About</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="listings.html">Listings</a>
+        </nav>
     </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
