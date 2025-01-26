@@ -3,115 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Browse our selection of rooms available for rent. Find the perfect match for your budget and needs.">
-    <meta name="keywords" content="rooms for rent, budget rooms, student accommodations, secure housing">
+    <meta name="description" content="Find affordable and quality rooms for rent with ease. Budget tools, secure payments, and tenant/landlord features included!">
+    <meta name="keywords" content="rooms for rent, affordable housing, tenant tools, landlord tools, secure payments">
     <meta name="author" content="Elias Malope">
-    <title>Rooms - Affordable Rooms</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Home - Affordable Rooms</title>
+    <link rel="stylesheet" href="styles/index.css">
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f4f4f9;
-        }
 
-        header {
-            background-color: #009087;
-            color: white;
-            padding: 1em 0;
-            text-align: center;
-        }
+        /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            margin: 0;
-            background: #e8e8e8;
-        }
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(180deg, #f4f7fb, #ffffff);
+    color: #333;
+    padding: 0;
+    margin: 0;
+}
 
-        nav ul li {
-            margin: 0 1em;
-        }
+/* Header Styles */
+header {
+    background: linear-gradient(45deg, #10add3, #12b1d1);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-        nav ul li a {
-            text-decoration: none;
-            color: #090909;
-            font-size: 1.1em;
-            padding: 0.5em;
-        }
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
 
-        nav ul li a:hover {
-            color: #ffffff;
-            background: #009087;
-            border-radius: 0.3em;
-        }
+/* Navigation Styles */
+nav {
+    background: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-        .rooms {
-            padding: 2em 1em;
-        }
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px 0;
+}
 
-        .rooms h1 {
-            text-align: center;
-            color: #004d40;
-        }
+nav li {
+    margin: 0 15px;
+}
 
-        .room-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2em;
-            padding: 1em;
-        }
+nav a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #333;
+    transition: color 0.3s ease;
+}
 
-        .room-card {
-            background: white;
-            border-radius: 0.5em;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            transition: transform 0.3s ease;
-        }
+nav a:hover {
+    color: #10add3;
+}
 
-        .room-card:hover {
-            transform: translateY(-10px);
-        }
+/* Hero Section Styles */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(45deg, #10add3, #12b1d1);
+    color: white;
+    border-radius: 0 0 40px 40px;
+    margin-bottom: 30px;
+}
 
-        .room-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
 
-        .room-card h3 {
-            margin: 0;
-            padding: 1em;
-            background: #009087;
-            color: white;
-            text-align: center;
-        }
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
 
-        .room-card p {
-            padding: 0 1em 1em;
-        }
+.button2 {
+    display: inline-block;
+    background: white;
+    color: #10add3;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
-        footer {
-            text-align: center;
-            padding: 1em 0;
-            background: #004d40;
-            color: white;
-            margin-top: 2em;
-        }
+.button2:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
 
-        @media (max-width: 768px) {
-            .room-card img {
-                height: 150px;
-            }
-        }
+.button2:active {
+    transform: scale(0.95);
+}
+
+/* Search Bar Section */
+.search-bar {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.search-bar input,
+.search-bar select,
+.search-bar button {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-bar input:focus,
+.search-bar select:focus {
+    border-color: #10add3;
+    box-shadow: 0 0 6px rgba(16, 173, 211, 0.5);
+}
+
+.search-bar button {
+    background: linear-gradient(45deg, #10add3, #12b1d1);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-bar button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar button:active {
+    transform: scale(0.95);
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    background: #333;
+    color: white;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
     </style>
 </head>
 <body>
     <header>
-        <h1>Rooms for Rent</h1>
+        <h1>Affordable Rooms</h1>
     </header>
     <nav>
         <ul>
@@ -122,31 +190,29 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-    <section class="rooms">
-        <h1>Available Rooms</h1>
-        <div class="room-cards">
-            <div class="room-card">
-                <img src="images/mo.jpg" alt="Cozy single room">
-                <h3>Cozy Single Room</h3>
-                <p>Location: City Center</p>
-                <p>Price: R3000/month</p>
-            </div>
-            <div class="room-card">
-                <img src="images/shii.jpg" alt="Spacious room">
-                <h3>Spacious Room</h3>
-                <p>Location: Suburb</p>
-                <p>Price: R2500/month</p>
-            </div>
-            <div class="room-card">
-                <img src="images/no3.jpg" alt="Shared room">
-                <h3>Shared Room</h3>
-                <p>Location: Near Campus</p>
-                <p>Price: R2000/month</p>
-            </div>
-        </div>
-    </section>
+    <main>
+        <section class="hero">
+            <h1>Welcome to Affordable Rooms</h1>
+            <p>Find your perfect room with ease. Affordable, secure, and tailored to your needs.</p>
+            <a href="rooms.html" class="button2">View Rooms</a>
+        </section>
+        <section class="search-bar">
+            <form id="search-form">
+                <input type="text" id="location" placeholder="Enter location" required>
+                <input type="number" id="budget" placeholder="Enter budget (e.g., 3000)" required>
+                <select id="amenities">
+                    <option value="">Select amenities</option>
+                    <option value="wifi">Wi-Fi</option>
+                    <option value="laundry">Laundry</option>
+                    <option value="parking">Parking</option>
+                </select>
+                <button type="submit">Search</button>
+            </form>
+        </section>
+    </main>
     <footer>
         <p>&copy; 2025 Affordable Rooms. All rights reserved.</p>
     </footer>
+    <script src="scripts/index.js"></script>
 </body>
 </html>
