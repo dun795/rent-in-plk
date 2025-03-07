@@ -1,130 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us - Affordable Rooms</title>
-  <style>
-    /* Ribbon Navigation Styles */
-    nav {
-      background: linear-gradient(45deg, #10add3, #12b1d1);
-      color: white;
-      padding: 15px 0;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-      border-bottom-left-radius: 15px;
-      border-bottom-right-radius: 15px;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about the team behind Affordable Rooms and our mission to help students find affordable housing.">
+    <meta name="keywords" content="about us, affordable rooms, student housing, team">
+    <meta name="author" content="Elias Malope">
+    <title>About Us - Affordable Rooms</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f9;
+        }
 
-    nav ul {
-      display: flex;
-      justify-content: center;
-      list-style: none;
-      padding: 0;
-    }
+        header {
+            background-color: #009087;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
 
-    nav li {
-      margin: 0 20px;
-    }
+        /* Navigation Styles from index.html */
+        nav {
+            background: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
 
-    nav a {
-      text-decoration: none;
-      font-size: 1.1rem;
-      color: white;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 10px 0;
+        }
 
-    nav a:hover {
-      color: #f4f7fb;
-    }
+        nav li {
+            margin: 0 15px;
+        }
 
-    /* Container styles */
-    .container {
-      max-width: 400px;
-      margin: 50px auto;
-      background: linear-gradient(0deg, #ffffff 0%, #f4f7fb 100%);
-      padding: 30px 40px;
-      border-radius: 20px;
-      box-shadow: rgba(133, 189, 215, 0.7) 0px 20px 30px -10px;
-      font-family: Arial, sans-serif;
-    }
+        nav a {
+            text-decoration: none;
+            font-size: 1rem;
+            color: #333;
+            transition: color 0.3s ease;
+        }
 
-    .heading {
-      text-align: center;
-      font-weight: bold;
-      font-size: 28px;
-      color: #1089d3;
-    }
+        nav a:hover {
+            color: #10add3;
+        }
 
-    /* About content styles */
-    .about-content {
-      margin-top: 20px;
-      text-align: center;
-    }
+        .about-section {
+            padding: 2em 1em;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
 
-    .about-content p {
-      font-size: 14px;
-      color: #333;
-      margin: 10px 0;
-    }
+        .about-section h1 {
+            color: #004d40;
+            margin-bottom: 1em;
+        }
 
-    .about-content .highlight {
-      font-weight: bold;
-      color: #1089d3;
-    }
+        .about-section p {
+            font-size: 1.1em;
+            color: #333;
+            margin: 0.5em 0;
+        }
 
-    /* Back button styles */
-    .back-button {
-      width: 100%;
-      padding: 15px;
-      margin: 15px 0;
-      background: linear-gradient(45deg, #1089d3 0%, #12b1d1 100%);
-      color: white;
-      font-weight: bold;
-      font-size: 16px;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      box-shadow: rgba(133, 189, 215, 0.7) 0px 15px 15px -10px;
-      transition: transform 0.2s ease;
-      text-decoration: none;
-      text-align: center;
-      display: block;
-    }
+        .about-section .highlight {
+            font-weight: bold;
+            color: #009087;
+        }
 
-    .back-button:hover {
-      transform: scale(1.05);
-    }
+        .back-button {
+            display: inline-block;
+            margin-top: 2em;
+            padding: 0.8em 1.5em;
+            background-color: #009087;
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            border-radius: 0.3em;
+            transition: transform 0.3s ease;
+        }
 
-    .back-button:active {
-      transform: scale(0.95);
-    }
-  </style>
+        .back-button:hover {
+            transform: scale(1.05);
+            background-color: #004d40;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background: #004d40;
+            color: white;
+            margin-top: 2em;
+        }
+    </style>
 </head>
 <body>
-  <!-- Ribbon Navigation -->
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="rooms.html">Rooms</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-
-  <div class="container">
-    <div class="heading">About Us</div>
-    <div class="about-content">
-      <p>We’re <span class="highlight">Elias Kgaphola</span> and <span class="highlight">Mashoto Matsi</span>, the brains behind Affordable Rooms.</p>
-      <p>Our mission? To make finding a room easy, especially for <span class="highlight">students</span>. We saw how tough it was to go door-to-door hunting for a place to stay, so we built this platform to bring the search to your fingertips.</p>
-      <p>Whether you’re a student on a budget or just someone needing a comfy spot, we’ve got you covered. No stress, no hassle—just affordable rooms in your comfort zone.</p>
-    </div>
-    <!-- Back to Home Button -->
-    <a href="index.html" class="back-button">Back to Home</a>
-  </div>
+    <header>
+        <h1>About Us</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="rooms.html">Rooms</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <section class="about-section">
+        <h1>Who We Are</h1>
+        <p>We’re <span class="highlight">Elias Kgaphola</span> and <span class="highlight">Mashoto Matsi</span>, the duo behind Affordable Rooms.</p>
+        <p>It all started with a simple idea: help <span class="highlight">students</span> find rooms without the hassle of going door-to-door. We’ve been there—knocking on doors, stressing about budgets—so we built this platform to make it easy, affordable, and stress-free.</p>
+        <p>Our focus is on students, but we’re here for anyone needing a room that fits their life. Comfort zone searching, all the way!</p>
+        <a href="index.html" class="back-button">Back to Home</a>
+    </section>
+    <footer>
+        <p>© 2025 Affordable Rooms. All rights reserved.</p>
+    </footer>
 </body>
 </html>
