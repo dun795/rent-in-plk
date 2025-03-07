@@ -12,50 +12,42 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: linear-gradient(180deg, #f4f7fb, #ffffff); /* Home page background */
+            background: linear-gradient(180deg, #f4f7fb, #ffffff);
         }
 
         header {
-            background: linear-gradient(45deg, #10add3, #12b1d1); /* Home page header color */
+            background: linear-gradient(45deg, #10add3, #12b1d1);
             color: white;
             padding: 1em 0;
             text-align: center;
         }
 
+        /* Navigation Styles from index.html */
         nav {
-            background: linear-gradient(45deg, #10add3, #12b1d1); /* Ribbon style from other pages */
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 15px;
+            background: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         nav ul {
-            list-style: none;
-            padding: 0;
             display: flex;
             justify-content: center;
-            margin: 0;
+            list-style: none;
+            padding: 10px 0;
         }
 
-        nav ul li {
-            margin: 0 1em; /* Kept from original */
+        nav li {
+            margin: 0 15px;
         }
 
-        nav ul li a {
+        nav a {
             text-decoration: none;
-            color: white; /* Adjusted for ribbon */
-            font-size: 1.1em;
-            padding: 0.5em;
+            font-size: 1rem;
+            color: #333;
+            transition: color 0.3s ease;
         }
 
-        nav ul li a:hover {
-            color: #f4f7fb; /* Lighter hover to match ribbon */
-            background: #12b1d1; /* Slightly darker shade of blue */
-            border-radius: 0.3em;
+        nav a:hover {
+            color: #10add3;
         }
 
         .rooms {
@@ -64,7 +56,7 @@
 
         .rooms h1 {
             text-align: center;
-            color: #333; /* Softer color from home page */
+            color: #333;
         }
 
         .room-cards {
@@ -95,7 +87,7 @@
         .room-card h3 {
             margin: 0;
             padding: 1em;
-            background: linear-gradient(45deg, #10add3, #12b1d1); /* Home page gradient */
+            background: linear-gradient(45deg, #10add3, #12b1d1);
             color: white;
             text-align: center;
         }
@@ -107,7 +99,7 @@
         footer {
             text-align: center;
             padding: 1em 0;
-            background: #333; /* Home page footer color */
+            background: #333;
             color: white;
             margin-top: 2em;
         }
