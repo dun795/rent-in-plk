@@ -1,35 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn more about IvyParkDwell, our values, mission, and vision. Discover how we are making a difference in the housing industry.">
-    <title>About Us - IvyParkDwell</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Affordable Rooms</title>
+  <style>
+    /* Ribbon Navigation Styles */
+    nav {
+      background: linear-gradient(45deg, #10add3, #12b1d1);
+      color: white;
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+    }
+
+    nav li {
+      margin: 0 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-size: 1.1rem;
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #f4f7fb;
+    }
+
+    /* Container styles */
+    .container {
+      max-width: 400px;
+      margin: 50px auto;
+      background: linear-gradient(0deg, #ffffff 0%, #f4f7fb 100%);
+      padding: 30px 40px;
+      border-radius: 20px;
+      box-shadow: rgba(133, 189, 215, 0.7) 0px 20px 30px -10px;
+      font-family: Arial, sans-serif;
+    }
+
+    .heading {
+      text-align: center;
+      font-weight: bold;
+      font-size: 28px;
+      color: #1089d3;
+    }
+
+    /* About content styles */
+    .about-content {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .about-content p {
+      font-size: 14px;
+      color: #333;
+      margin: 10px 0;
+    }
+
+    .about-content .highlight {
+      font-weight: bold;
+      color: #1089d3;
+    }
+
+    /* Back button styles */
+    .back-button {
+      width: 100%;
+      padding: 15px;
+      margin: 15px 0;
+      background: linear-gradient(45deg, #1089d3 0%, #12b1d1 100%);
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: rgba(133, 189, 215, 0.7) 0px 15px 15px -10px;
+      transition: transform 0.2s ease;
+      text-decoration: none;
+      text-align: center;
+      display: block;
+    }
+
+    .back-button:hover {
+      transform: scale(1.05);
+    }
+
+    .back-button:active {
+      transform: scale(0.95);
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="images/logo.jpg" alt="IvyParkDwell Logo">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="listings.html">Listings</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="Feedback.html">Feedback</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Ribbon Navigation -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="rooms.html">Rooms</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-    <section class="about">
-        <h1>About IvyParkDwell</h1>
-        <p>At IvyParkDwell, we are committed to providing exceptional housing solutions for all our tenants. Our mission is to offer a range of affordable, well-maintained rooms and apartments to meet the diverse needs of our community.</p>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 IvyParkDwell. All rights reserved.</p>
-    </footer>
+  <div class="container">
+    <div class="heading">About Us</div>
+    <div class="about-content">
+      <p>We’re <span class="highlight">Elias Kgaphola</span> and <span class="highlight">Mashoto Matsi</span>, the brains behind Affordable Rooms.</p>
+      <p>Our mission? To make finding a room easy, especially for <span class="highlight">students</span>. We saw how tough it was to go door-to-door hunting for a place to stay, so we built this platform to bring the search to your fingertips.</p>
+      <p>Whether you’re a student on a budget or just someone needing a comfy spot, we’ve got you covered. No stress, no hassle—just affordable rooms in your comfort zone.</p>
+    </div>
+    <!-- Back to Home Button -->
+    <a href="index.html" class="back-button">Back to Home</a>
+  </div>
 </body>
 </html>
