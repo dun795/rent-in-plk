@@ -7,148 +7,353 @@
     <meta name="keywords" content="rooms for rent, budget rooms, student accommodations, secure housing">
     <meta name="author" content="Elias Malope">
     <title>Rooms - Rent In PLK</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body {
+        /* Global Styles */
+        * {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(180deg, #f4f7fb, #ffffff);
+            padding: 0;
+            box-sizing: border-box;
         }
 
+        :root {
+            --primary: #10add3;
+            --primary-dark: #0e97b8;
+            --secondary: #43fadb;
+            --dark: #333;
+            --light: #ffffff;
+            --light-gray: #f4f7fb;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Poppins', 'Arial', sans-serif;
+            line-height: 1.6;
+            background: var(--light-gray);
+            color: var(--dark);
+        }
+
+        /* Header Styles */
         header {
-            background: linear-gradient(45deg, #10add3, #12b1d1);
-            color: white;
-            padding: 1em 0;
+            background: linear-gradient(135deg, var(--primary), #1089d3);
+            color: var(--light);
             text-align: center;
+            padding: 1.5rem 0;
+            box-shadow: var(--shadow);
         }
 
-        /* Navigation Styles from index.html */
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        /* Navigation Styles */
         nav {
-            background: #ffffff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background: var(--light);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
         }
 
         nav ul {
             display: flex;
-            justify-content: center;
             list-style: none;
-            padding: 10px 0;
-        }
-
-        nav li {
-            margin: 0 15px;
+            gap: 2rem;
         }
 
         nav a {
             text-decoration: none;
             font-size: 1rem;
-            color: #333;
-            transition: color 0.3s ease;
+            color: var(--dark);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        nav a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary);
+            transition: var(--transition);
         }
 
         nav a:hover {
-            color: #10add3;
+            color: var(--primary);
         }
 
-        .rooms {
-            padding: 2em 1em;
+        nav a:hover:after {
+            width: 100%;
         }
 
-        .rooms h1 {
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary);
+        }
+
+        /* Rooms Section */
+        .rooms-container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .rooms-header {
             text-align: center;
-            color: #333;
+            margin-bottom: 3rem;
         }
 
-        .room-cards {
+        .rooms-header h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .rooms-header p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Filter Section */
+        .room-filters {
+            background: var(--light);
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+        }
+
+        .filter-form {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2em;
-            padding: 1em;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .filter-group label {
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .filter-group input,
+        .filter-group select {
+            padding: 0.8rem 1rem;
+            border: 1px solid #e1e1e1;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .filter-group input:focus,
+        .filter-group select:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(16, 173, 211, 0.2);
+        }
+
+        .filter-buttons {
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .filter-btn {
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .filter-btn.reset {
+            background: #f1f1f1;
+            color: var(--dark);
+            border: 1px solid #ddd;
+        }
+
+        .filter-btn.apply {
+            background: var(--primary);
+            color: var(--light);
+            border: none;
+        }
+
+        .filter-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .filter-btn.reset:hover {
+            background: #e5e5e5;
+        }
+
+        .filter-btn.apply:hover {
+            background: var(--primary-dark);
+        }
+
+        /* Room Cards */
+        .room-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
         }
 
         .room-card {
-            background: white;
-            border-radius: 0.5em;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background: var(--light);
+            border-radius: 10px;
             overflow: hidden;
-            transition: transform 0.3s ease;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
         }
 
         .room-card:hover {
             transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
         }
 
-        .room-card img {
-            width: 100%;
+        .room-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--primary);
+            color: var(--light);
+            padding: 0.4rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 10;
+        }
+
+        .room-img {
             height: 200px;
+            overflow: hidden;
+        }
+
+        .room-img img {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
+            transition: transform 0.5s ease;
         }
 
-        .room-card h3 {
-            margin: 0;
-            padding: 1em;
-            background: linear-gradient(45deg, #10add3, #12b1d1);
-            color: white;
-            text-align: center;
+        .room-card:hover .room-img img {
+            transform: scale(1.1);
         }
 
-        .room-card p {
-            padding: 0 1em 1em;
+        .room-content {
+            padding: 1.5rem;
         }
 
-        footer {
-            text-align: center;
-            padding: 1em 0;
-            background: #333;
-            color: white;
-            margin-top: 2em;
+        .room-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            color: var(--primary);
         }
 
-        @media (max-width: 768px) {
-            .room-card img {
-                height: 150px;
-            }
+        .room-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1rem;
         }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Rooms for Rent</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="rooms.html">Rooms</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-    <section class="rooms">
-        <h1>Available Rooms</h1>
-        <div class="room-cards">
-            <div class="room-card">
-                <img src="images/mo.jpg" alt="Cozy single room">
-                <h3>Cozy Single Room</h3>
-                <p>Location: City Center</p>
-                <p>Price: R3000/month</p>
-            </div>
-            <div class="room-card">
-                <img src="images/shii.jpg" alt="Spacious room">
-                <h3>Spacious Room</h3>
-                <p>Location: Suburb</p>
-                <p>Price: R2500/month</p>
-            </div>
-            <div class="room-card">
-                <img src="images/no3.jpg" alt="Shared room">
-                <h3>Shared Room</h3>
-                <p>Location: Near Campus</p>
-                <p>Price: R2000/month</p>
-            </div>
-        </div>
-    </section>
-    <footer>
-        <p>© 2025 Rent In PLK. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+
+        .room-detail {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .room-detail i {
+            color: var(--primary);
+        }
+
+        .room-amenities {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .amenity {
+            background: #f1f1f1;
+            color: #555;
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+        }
+
+        .room-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .room-actions {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .view-details {
+            display: inline-block;
+            padding: 0.7rem 1.5rem;
+            background: var(--primary);
+            color: var(--light);
+            font-weight: 600;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .view-details:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+
+        .wishlist-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #f1f1f1;
+            color: #888;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .wishlist-btn:hover {
+            background: #ffeded;
