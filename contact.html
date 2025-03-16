@@ -4,207 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact - Rent In PLK</title>
-  <style>
-    /* Header styles */
-    header {
-      background: linear-gradient(45deg, #10add3, #12b1d1);
-      color: white;
-      padding: 1em 0;
-      text-align: center;
-    }
-
-    /* Navigation Styles from index.html */
-    nav {
-      background: #ffffff;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    nav ul {
-      display: flex;
-      justify-content: center;
-      list-style: none;
-      padding: 10px 0;
-    }
-
-    nav li {
-      margin: 0 15px;
-    }
-
-    nav a {
-      text-decoration: none;
-      font-size: 1rem;
-      color: #333;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #10add3;
-    }
-
-    /* Container styles */
-    .container {
-      max-width: 400px;
-      margin: 50px auto;
-      background: linear-gradient(0deg, #ffffff 0%, #f4f7fb 100%);
-      padding: 30px 40px;
-      border-radius: 20px;
-      box-shadow: rgba(133, 189, 215, 0.7) 0px 20px 30px -10px;
-      font-family: Arial, sans-serif;
-    }
-
-    .heading {
-      text-align: center;
-      font-weight: bold;
-      font-size: 28px;
-      color: #1089d3;
-    }
-
-    .form {
-      margin-top: 20px;
-    }
-
-    .form .input {
-      width: 100%;
-      padding: 15px 20px;
-      margin: 10px 0;
-      background: white;
-      border: none;
-      border-radius: 10px;
-      box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 10px -5px;
-      font-size: 14px;
-      color: #333;
-    }
-
-    .form .input::placeholder {
-      color: #aaa;
-    }
-
-    .form .input:focus {
-      outline: none;
-      border: 2px solid #12b1d1;
-    }
-
-    .form .textarea {
-      height: 120px;
-      resize: none;
-    }
-
-    .form .submit-button {
-      width: 100%;
-      padding: 15px;
-      margin: 15px 0;
-      background: linear-gradient(45deg, #1089d3 0%, #12b1d1 100%);
-      color: white;
-      font-weight: bold;
-      font-size: 16px;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      box-shadow: rgba(133, 189, 215, 0.7) 0px 15px 15px -10px;
-      transition: transform 0.2s ease;
-    }
-
-    .form .submit-button:hover {
-      transform: scale(1.05);
-    }
-
-    .form .submit-button:active {
-      transform: scale(0.95);
-    }
-
-    .social-account-container {
-      margin-top: 25px;
-      text-align: center;
-    }
-
-    .social-account-container .title {
-      font-size: 14px;
-      color: #aaa;
-      margin-bottom: 10px;
-    }
-
-    .social-account-container .social-accounts {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-    }
-
-    .social-account-container .social-accounts .social-button {
-      width: 45px;
-      height: 45px;
-      background: linear-gradient(45deg, #000 0%, #707070 100%);
-      border: 3px solid #fff;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      box-shadow: rgba(133, 189, 215, 0.7) 0px 10px 10px -5px;
-      transition: transform 0.2s ease;
-    }
-
-    .social-account-container .social-accounts .social-button:hover {
-      transform: scale(1.1);
-    }
-
-    .social-account-container .social-accounts .social-button:active {
-      transform: scale(0.9);
-    }
-
-    .social-account-container .social-accounts .social-button svg {
-      fill: white;
-      width: 20px;
-      height: 20px;
-    }
-
-    .back-button {
-      width: 100%;
-      padding: 15px;
-      margin: 15px 0;
-      background: linear-gradient(45deg, #1089d3 0%, #12b1d1 100%);
-      color: white;
-      font-weight: bold;
-      font-size: 16px;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      box-shadow: rgba(133, 189, 215, 0.7) 0px 15px 15px -10px;
-      transition: transform 0.2s ease;
-      text-decoration: none;
-      text-align: center;
-      display: block;
-    }
-
-    .back-button:hover {
-      transform: scale(1.05);
-    }
-
-    .back-button:active {
-      transform: scale(0.95);
-    }
-
-    .contact-details {
-      margin-top: 25px;
-      text-align: center;
-    }
-
-    .contact-details .title {
-      font-size: 16px;
-      font-weight: bold;
-      color: #1089d3;
-      margin-bottom: 10px;
-    }
-
-    .contact-details p {
-      font-size: 14px;
-      color: #333;
-      margin: 5px 0;
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <h1>Contact Us</h1>
+    <p>Get in touch with our friendly team</p>
   </header>
+  
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -214,35 +25,131 @@
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
+  
   <div class="container">
-    <div class="heading">Contact Us</div>
-    <form class="form">
-      <input type="text" name="name" class="input" placeholder="Name" required>
-      <input type="email" name="email" class="input" placeholder="Email" required>
-      <textarea name="message" class="input textarea" placeholder="Message" required></textarea>
-      <button type="submit" class="submit-button">Submit</button>
-    </form>
-    <div class="social-account-container">
-      <span class="title">Or Connect with</span>
-      <div class="social-accounts">
-        <button class="social-button google">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512"><path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"/></svg>
-        </button>
-        <button class="social-button apple">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
-        </button>
-        <button class="social-button twitter">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.4 151.7c.3 2.8 .3 5.6 .3 8.4 0 84.7-64.4 182.3-182.3 182.3-36.2 0-69.8-10.5-98.1-28.7 4.8 .6 9.6 .8 14.5 .8 30.1 0 57.8-10.2 79.8-27.3-28.1-.6-51.7-19.1-59.9-44.6 3.9 .6 7.8 .8 11.8 .8 5.7 0 11.3-.8 16.7-2.2-29.3-6-51.3-31.6-51.3-62.4v-.8c8.6 4.8 18.4 7.8 28.9 8.1-17.1-11.5-28.3-31.1-28.3-53.2 0-11.7 3.2-22.8 8.8-32.3 31.8 39 79.5 64.7 133.2 67.5-1-4.7-1.5-9.6-1.5-14.7 0-35.6 28.9-64.4 64.4-64.4 18.5 0 35.2 7.8 46.9 20.3 14.7-2.8 28.6-8.3 41.2-15.8-4.8 14.9-14.9 27.4-28.1 35.2 13.1-1.5 25.6-5 37.2-10.1-8.7 12.9-19.5 24.1-32 33.3z"/></svg>
-        </button>
+    <div class="card">
+      <div class="card-content">
+        <h2 class="text-center">We'd Love To Hear From You</h2>
+        <p class="text-center mb-4">Fill out the form below and we'll get back to you as soon as possible</p>
+        
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" class="form-control" placeholder="How can we help you?" required></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-full">Send Message</button>
+        </form>
       </div>
     </div>
-    <div class="contact-details">
-      <span class="title">Get in Touch with Us</span>
-      <p>Email: support@affordablerooms.com</p>
-      <p>Phone: +27 123 456 789</p>
-      <p>Address: 123 Room Street, Pretoria, South Africa</p>
+    
+    <div class="contact-info card">
+      <div class="card-header">
+        <h2>Contact Information</h2>
+      </div>
+      <div class="card-content">
+        <div class="contact-detail">
+          <i class="fas fa-envelope"></i>
+          <div>
+            <h3>Email</h3>
+            <p>support@affordablerooms.com</p>
+          </div>
+        </div>
+        
+        <div class="contact-detail">
+          <i class="fas fa-phone"></i>
+          <div>
+            <h3>Phone</h3>
+            <p>+27 123 456 789</p>
+          </div>
+        </div>
+        
+        <div class="contact-detail">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <h3>Address</h3>
+            <p>123 Room Street, Pretoria, South Africa</p>
+          </div>
+        </div>
+        
+        <div class="social-media">
+          <h3>Connect With Us</h3>
+          <div class="social-icons">
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
     </div>
-    <a href="index.html" class="back-button">Back to Home</a>
   </div>
+  
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Rent In PLK. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <style>
+    /* Additional Contact Page Styles */
+    .text-center {
+      text-align: center;
+    }
+    
+    .mb-4 {
+      margin-bottom: 1.5rem;
+    }
+    
+    .contact-detail {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+    }
+    
+    .contact-detail i {
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-right: 1rem;
+      min-width: 30px;
+    }
+    
+    .contact-detail h3 {
+      margin-bottom: 0.3rem;
+      font-size: 1.1rem;
+    }
+    
+    .social-media {
+      margin-top: 2rem;
+    }
+    
+    .social-media h3 {
+      margin-bottom: 1rem;
+    }
+    
+    @media (min-width: 768px) {
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+    }
+    
+    @media (max-width: 767px) {
+      .card {
+        margin-bottom: 2rem;
+      }
+    }
+  </style>
 </body>
 </html>
