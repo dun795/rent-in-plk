@@ -297,11 +297,11 @@
             .room-grid {
                 grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             }
-            
+
             .filter-form {
                 grid-template-columns: 1fr;
             }
-            
+
             .filter-buttons {
                 justify-content: center;
             }
@@ -312,7 +312,7 @@
     <header>
         <h1>Rent In Polokwane</h1>
     </header>
-    
+
     <nav>
         <div class="nav-container">
             <a href="index.html" class="logo">RentInPLK</a>
@@ -328,38 +328,38 @@
             </ul>
         </div>
     </nav>
-    
+
     <main>
         <div class="rooms-container">
             <div class="rooms-header">
                 <h1>Available Rooms</h1>
                 <p>Browse our selection of affordable rooms in Polokwane. Filter by location, price, and amenities to find your perfect match.</p>
             </div>
-            
+
             <div class="room-filters">
                 <form class="filter-form">
                     <div class="filter-group">
                         <label for="location">Location</label>
                         <select id="location" name="location">
                             <option value="">All Locations</option>
-                            <option value="city-center">City Center</option>
-                            <option value="university">Near University</option>
+                            <option value="city-center">polokwane central</option>
+                            <option value="university">annadel</option>
                             <option value="bendor">Bendor</option>
                             <option value="nirvana">Nirvana</option>
                             <option value="flora-park">Flora Park</option>
                         </select>
                     </div>
-                    
+
                     <div class="filter-group">
                         <label for="price-min">Min Price (R)</label>
                         <input type="number" id="price-min" name="price-min" placeholder="0" min="0">
                     </div>
-                    
+
                     <div class="filter-group">
                         <label for="price-max">Max Price (R)</label>
                         <input type="number" id="price-max" name="price-max" placeholder="5000" min="0">
                     </div>
-                    
+
                     <div class="filter-group">
                         <label for="amenities">Amenities</label>
                         <select id="amenities" name="amenities">
@@ -371,14 +371,14 @@
                             <option value="electricity">Prepaid Electricity</option>
                         </select>
                     </div>
-                    
+
                     <div class="filter-buttons">
                         <button type="reset" class="filter-btn reset">Reset</button>
                         <button type="submit" class="filter-btn apply">Apply Filters</button>
                     </div>
                 </form>
             </div>
-            
+
             <div class="room-grid">
                 <!-- Room 1 -->
                 <div class="room-card">
@@ -414,7 +414,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Room 2 -->
                 <div class="room-card">
                     <div class="room-img">
@@ -449,7 +449,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Room 3 -->
                 <div class="room-card">
                     <div class="room-img">
@@ -482,7 +482,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Room 4 -->
                 <div class="room-card">
                     <div class="room-badge">New</div>
@@ -519,7 +519,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Room 5 -->
                 <div class="room-card">
                     <div class="room-img">
@@ -553,7 +553,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Room 6 -->
                 <div class="room-card">
                     <div class="room-img">
@@ -588,7 +588,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="pagination">
                 <a href="#" class="active">1</a>
                 <a href="#">2</a>
@@ -598,7 +598,7 @@
             </div>
         </div>
     </main>
-    
+
     <footer>
         <div class="footer-content">
             <div class="footer-column">
@@ -611,7 +611,7 @@
                     <a href="#"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
-            
+
             <div class="footer-column">
                 <h3>Quick Links</h3>
                 <ul>
@@ -622,7 +622,7 @@
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </div>
-            
+
             <div class="footer-column">
                 <h3>Contact Info</h3>
                 <p><i class="fas fa-envelope"></i> support@affordablerooms.com</p>
@@ -630,24 +630,24 @@
                 <p><i class="fas fa-map-marker-alt"></i> 123 Room Street, Pretoria, South Africa</p>
             </div>
         </div>
-        
+
         <div class="copyright">
             <p>&copy; 2025 Rent In PLK. All rights reserved.</p>
         </div>
     </footer>
-    
+
     <script>
         // Mobile menu toggle
         const menuBtn = document.querySelector('.mobile-menu-btn');
         const navMenu = document.querySelector('#navMenu');
-        
+
         menuBtn.addEventListener('click', () => {
             navMenu.classList.toggle('active');
         });
-        
+
         // Wishlist functionality
         const wishlistBtns = document.querySelectorAll('.wishlist-btn');
-        
+
         wishlistBtns.forEach(btn => {
             btn.addEventListener('click', () => {
                 const icon = btn.querySelector('i');
@@ -664,10 +664,10 @@
                 }
             });
         });
-        
+
         // Filter form submission (prevent default for demo)
         const filterForm = document.querySelector('.filter-form');
-        
+
         filterForm.addEventListener('submit', (e) => {
             e.preventDefault();
             // Add filter logic here
